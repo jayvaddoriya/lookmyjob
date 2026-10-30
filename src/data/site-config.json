@@ -14,8 +14,8 @@
     "telegram": "https://t.me/lookmyjob_alerts"
   },
   "adsense": {
-    "enabled": false,
-    "publisherId": "ca-pub-XXXXXXXXXXXXXXXX",
+    "enabled": true,
+    "publisherId": "ca-pub-1539263458228927",
     "showPlaceholders": true
   }
 }
