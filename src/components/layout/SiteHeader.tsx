@@ -119,23 +119,23 @@ export default function SiteHeader() {
             {/* ----------------------------------------------------- */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-sky-400 rounded-xl p-1 shrink-0"
+              className="flex items-center gap-2 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-sky-400 rounded-xl p-0.5 sm:p-1 shrink-0"
               aria-label="LookMyJob Home"
             >
               {/* Premium Monogram Icon Container */}
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-blue-500 via-sky-500 to-indigo-600 p-[1.5px] shadow-md shadow-blue-500/20 group-hover:scale-105 transition-all">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                  <Briefcase className="w-5 h-5 text-sky-400 group-hover:text-sky-300 transition-colors" />
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-blue-500 via-sky-500 to-indigo-600 p-[1.5px] shadow-md shadow-blue-500/20 group-hover:scale-105 transition-all shrink-0">
+                <div className="w-full h-full bg-slate-950 rounded-[9px] sm:rounded-[10px] flex items-center justify-center">
+                  <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-sky-400 group-hover:text-sky-300 transition-colors" />
                 </div>
               </div>
 
               {/* Text Wordmark & Tagline */}
               <div className="flex flex-col">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-xl sm:text-2xl font-black tracking-tight text-white font-sans leading-none">
+                <div className="flex items-center gap-1 sm:gap-1.5">
+                  <span className="text-lg sm:text-2xl font-black tracking-tight text-white font-sans leading-none">
                     Look<span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">My</span>Job
                   </span>
-                  <span className="text-[10px] font-black uppercase tracking-wider text-sky-300 bg-sky-500/15 px-1.5 py-0.5 rounded-md border border-sky-400/30">
+                  <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-sky-300 bg-sky-500/15 px-1 sm:px-1.5 py-0.5 rounded border border-sky-400/30">
                     .online
                   </span>
                 </div>
@@ -176,7 +176,7 @@ export default function SiteHeader() {
             {/* ----------------------------------------------------- */}
             {/* 3. RIGHT CONTROLS & CTA                               */}
             {/* ----------------------------------------------------- */}
-            <div className="flex items-center gap-2.5 sm:gap-3.5 shrink-0">
+            <div className="flex items-center gap-2 sm:gap-3.5 shrink-0">
               {/* Quick Search Shortcut Pill */}
               <Link
                 href="/jobs"
@@ -193,7 +193,7 @@ export default function SiteHeader() {
               {/* Saved Jobs Bookmark */}
               <Link
                 href="/jobs?saved=true"
-                className="relative p-2.5 text-slate-300 hover:text-white hover:bg-slate-800/80 rounded-xl border border-transparent hover:border-slate-700/60 transition-all"
+                className="relative p-2 sm:p-2.5 text-slate-300 hover:text-white hover:bg-slate-800/80 rounded-xl border border-transparent hover:border-slate-700/60 transition-all"
                 title="Saved Opportunities"
                 aria-label={`Saved Jobs (${savedCount})`}
               >
@@ -205,10 +205,10 @@ export default function SiteHeader() {
                 )}
               </Link>
 
-              {/* Primary Call to Action Button */}
+              {/* Primary Call to Action Button (Hidden on small mobile, accessible in menu) */}
               <Link
                 href="/jobs"
-                className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold rounded-xl text-white bg-gradient-to-r from-blue-600 via-sky-600 to-blue-600 hover:from-blue-500 hover:via-sky-500 hover:to-blue-500 border border-sky-400/20 shadow-md shadow-blue-600/25 active:scale-95 transition-all"
+                className="hidden sm:inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold rounded-xl text-white bg-gradient-to-r from-blue-600 via-sky-600 to-blue-600 hover:from-blue-500 hover:via-sky-500 hover:to-blue-500 border border-sky-400/20 shadow-md shadow-blue-600/25 active:scale-95 transition-all"
               >
                 <span>Browse Jobs</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -218,7 +218,7 @@ export default function SiteHeader() {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl border border-slate-700/60 focus:outline-none focus:ring-2 focus:ring-sky-400"
+                className="lg:hidden p-2 sm:p-2.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl border border-slate-700/60 focus:outline-none focus:ring-2 focus:ring-sky-400"
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Toggle navigation menu"
               >
@@ -247,6 +247,16 @@ export default function SiteHeader() {
               />
               <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
             </form>
+
+            {/* Mobile Direct Action Button */}
+            <Link
+              href="/jobs"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full py-3 px-4 text-sm font-bold rounded-xl text-white bg-gradient-to-r from-blue-600 via-sky-600 to-blue-600 shadow-md shadow-blue-600/25"
+            >
+              <span>Browse All 60+ Vacancies</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
 
             {/* Menu Links */}
             <div className="space-y-1">

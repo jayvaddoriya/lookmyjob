@@ -97,14 +97,14 @@ export default function FeaturedJobCard({ job }: FeaturedJobCardProps) {
         </p>
       </div>
 
-      <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+      <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
         <div className="text-[11px] text-slate-500 flex items-center gap-1">
-          <Clock className="w-3.5 h-3.5 text-slate-400" />
+          <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
           {job.isExpired ? (
             <span className="font-semibold text-rose-600">Applications Closed</span>
           ) : (
             <span>
-              Closes in <strong className="text-blue-600 font-bold">{job.daysRemaining} days</strong> (Deadline: {job.applicationDeadline})
+              Closes in <strong className="text-blue-600 font-bold">{job.daysRemaining} days</strong>
             </span>
           )}
         </div>

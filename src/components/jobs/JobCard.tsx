@@ -124,22 +124,24 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
         </h3>
 
         {/* Key Highlights Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 py-2.5 px-3 rounded-xl bg-slate-50/80 border border-slate-100 text-xs text-slate-600 mb-3.5">
-          <div className="flex items-center gap-1.5">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 py-2 px-3 rounded-xl bg-slate-50/80 border border-slate-100 text-xs text-slate-600 mb-3.5">
+          <div className="flex items-center gap-1.5 font-bold text-slate-900">
             <IndianRupee className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span className="font-semibold text-slate-800 truncate" title={job.salary}>
-              {job.salary}
+            <span>{job.salary}</span>
+          </div>
+
+          <div className="flex items-center gap-3 text-slate-500 text-[11px] sm:text-xs">
+            <span className="hidden sm:inline text-slate-300">•</span>
+            <span className="flex items-center gap-1">
+              <Briefcase className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <span>{job.experience}</span>
             </span>
-          </div>
 
-          <div className="flex items-center gap-1.5">
-            <Briefcase className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-            <span className="truncate">{job.experience}</span>
-          </div>
-
-          <div className="flex items-center gap-1.5 col-span-2 sm:col-span-1">
-            <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-            <span className="truncate">{job.jobType}</span>
+            <span className="text-slate-300">•</span>
+            <span className="flex items-center gap-1">
+              <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <span>{job.jobType}</span>
+            </span>
           </div>
         </div>
 
@@ -167,12 +169,10 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
       </div>
 
       {/* Card Footer */}
-      <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-3 text-xs">
-        <div className="flex items-center gap-2 text-slate-400 text-[11px]">
-          <span className="flex items-center gap-1">
-            <Calendar className="w-3 h-3" />
-            <span>Posted {job.postedRelative || formattedDate}</span>
-          </span>
+      <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2.5 text-xs">
+        <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
+          <Calendar className="w-3 h-3 shrink-0" />
+          <span>Posted {job.postedRelative || formattedDate}</span>
           {job.vacancies > 0 && (
             <>
               <span>•</span>
@@ -183,22 +183,22 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
           )}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <Link
             href={`/jobs/${job.slug}`}
-            className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+            className="px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors"
           >
             Details
           </Link>
 
           {job.isExpired ? (
-            <span className="px-3.5 py-1.5 rounded-xl bg-slate-200 text-slate-500 font-semibold text-xs cursor-not-allowed">
+            <span className="px-3 py-1.5 rounded-xl bg-slate-200 text-slate-500 font-semibold text-xs cursor-not-allowed">
               Closed (15d)
             </span>
           ) : hasApplied ? (
             <Link
               href={`/jobs/${job.slug}/apply`}
-              className="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors shadow-sm"
+              className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors shadow-sm"
             >
               View Application
             </Link>
