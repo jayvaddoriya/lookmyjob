@@ -1,0 +1,62 @@
+[
+  {
+    "id": "faq-1",
+    "question": "What is LookMyJob and how does it help job seekers?",
+    "answer": "LookMyJob is an independent, premium job discovery portal designed to connect job seekers across India with verified career opportunities in government departments, leading IT enterprises, banking institutions, and remote-first companies. We aggregate official notifications and direct employer openings into a clean, searchable platform without charging any fees to candidates.",
+    "category": "General"
+  },
+  {
+    "id": "faq-2",
+    "question": "Does LookMyJob charge job seekers any registration or application fee?",
+    "answer": "No, never. LookMyJob is 100% free for all job seekers. We never charge money for viewing job listings, reading career guides, or accessing official application links. If anyone claims to represent LookMyJob and asks for payment, please report it to support@lookmyjob.online immediately.",
+    "category": "Job Seekers"
+  },
+  {
+    "id": "faq-3",
+    "question": "How are government jobs (Sarkari Naukri) verified on LookMyJob?",
+    "answer": "Our editorial research team tracks official government gazettes, recruitment portals (such as UPSC, SSC, RRB, and State PSCs), and employment news bulletins. Every government listing on LookMyJob includes direct references to the official gazette notice, eligibility criteria, and authentic application portals.",
+    "category": "Government Exams"
+  },
+  {
+    "id": "faq-4",
+    "question": "How do I apply for jobs featured on LookMyJob?",
+    "answer": "Each job detail page includes an 'Official Application' or 'Apply on Employer Site' button. Clicking this redirects you securely to the official recruitment portal of the hiring organization or government commission. Note that on our sample demonstration pages, demo links are clearly labeled.",
+    "category": "Job Seekers"
+  },
+  {
+    "id": "faq-5",
+    "question": "Can fresh graduates find entry-level jobs on LookMyJob?",
+    "answer": "Yes! We have a dedicated 'Freshers' section featuring campus drives, graduate engineer trainee (GET) vacancies, junior IT roles, and central government exams where no prior work experience is required.",
+    "category": "Job Seekers"
+  },
+  {
+    "id": "faq-6",
+    "question": "How can I filter for 100% remote or Work-From-Home jobs?",
+    "answer": "You can visit our dedicated '/work-from-home' hub or use the 'Work From Home' checkbox filter on the all-jobs listing page to discover verified remote engineering, design, marketing, and support opportunities across India.",
+    "category": "Job Seekers"
+  },
+  {
+    "id": "faq-7",
+    "question": "How do employers post jobs or advertise on LookMyJob?",
+    "answer": "Employers and brands can reach thousands of qualified Indian professionals by visiting our '/advertise-with-us' section or contacting our corporate relations desk at corporate@lookmyjob.online.",
+    "category": "Employers"
+  },
+  {
+    "id": "faq-8",
+    "question": "How does LookMyJob generate revenue to keep services free for candidates?",
+    "answer": "LookMyJob sustains its independent editorial operations, server infrastructure, and verification systems through digital display advertising partnerships (including Google AdSense) and sponsored employer spotlights. Advertisements are clearly designated and kept non-intrusive.",
+    "category": "Monetization"
+  },
+  {
+    "id": "faq-9",
+    "question": "How often are new job opportunities updated on the platform?",
+    "answer": "Our data pipeline and editorial team update job listings and government exam alerts daily. We also archive expired postings promptly so candidates only apply to active openings.",
+    "category": "General"
+  },
+  {
+    "id": "faq-10",
+    "question": "Are the jobs on LookMyJob active recruitment notices or demonstration data?",
+    "answer": "During this development preview phase, all listings are realistic sample data modeled after real Indian recruitment patterns and clearly marked with 'Sample Demonstration Listing' disclosures. In production, this architecture seamlessly connects to live verified employer APIs.",
+    "category": "General"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "ahmedabad",
+    "name": "Ahmedabad",
+    "state": "Gujarat",
+    "jobCount": 680,
+    "description": "Ahmedabad is Gujarat's commercial powerhouse, offering abundant opportunities in IT, chemicals, pharmaceuticals, textiles, and financial services at GIFT City.",
+    "popularLocalities": ["SG Highway", "Prahlad Nagar", "Navrangpura", "GIFT City", "Sanand", "Bodakdev"],
+    "topIndustries": ["Information Technology", "Pharmaceuticals", "Fintech & Banking", "Chemical Manufacturing", "Textiles"],
+    "metaTitle": "Jobs in Ahmedabad 2026 | IT, Pharma & Banking Careers - LookMyJob",
+    "metaDescription": "Explore top job openings in Ahmedabad and GIFT City. Find vacancies across software development, pharma, finance, and corporate management."
+  },
+  {
+    "slug": "surat",
+    "name": "Surat",
+    "state": "Gujarat",
+    "jobCount": 420,
+    "description": "Known as the Diamond City and textile capital of India, Surat is rapidly growing in IT services, port logistics, manufacturing, and modern retail.",
+    "popularLocalities": ["Adajan", "Vesu", "Katargam", "Hazira Industrial Area", "Varachha", "Piplod"],
+    "topIndustries": ["Textile & Apparel", "Diamond & Jewelry", "Heavy Engineering (Hazira)", "IT & Digital Services", "Logistics & Trade"],
+    "metaTitle": "Jobs in Surat 2026 | IT, Manufacturing & Business Openings - LookMyJob",
+    "metaDescription": "Find verified jobs in Surat, Gujarat. Discover opportunities in IT companies, manufacturing hubs, trade, and engineering."
+  },
+  {
+    "slug": "mumbai",
+    "name": "Mumbai",
+    "state": "Maharashtra",
+    "jobCount": 1840,
+    "description": "India's financial capital hosts head offices of major banks, fintech enterprises, media conglomerates, FMCG giants, and consulting leaders.",
+    "popularLocalities": ["Bandra-Kurla Complex (BKC)", "Andheri East", "Lower Parel", "Navi Mumbai", "Thane", "Goregaon"],
+    "topIndustries": ["Investment Banking & Finance", "Media & Entertainment", "Fintech", "Consulting", "Information Technology"],
+    "metaTitle": "Jobs in Mumbai 2026 | Finance, IT & Corporate Openings - LookMyJob",
+    "metaDescription": "Discover thousands of jobs in Mumbai, BKC, and Navi Mumbai. Apply for banking, software, marketing, and leadership roles."
+  },
+  {
+    "slug": "delhi",
+    "name": "Delhi-NCR",
+    "state": "Delhi / Haryana / UP",
+    "jobCount": 1920,
+    "description": "The National Capital Region encompassing Delhi, Gurugram, and Noida is the primary center for central government ministries, top MNC headquarters, and startups.",
+    "popularLocalities": ["Cyber City Gurugram", "Sector 62 Noida", "Connaught Place", "Okhla Industrial Area", "Saket", "Nehru Place"],
+    "topIndustries": ["Central Government Administration", "Tech & SaaS Startups", "Consulting & Law", "Telecom", "E-commerce"],
+    "metaTitle": "Jobs in Delhi NCR 2026 | Government, IT & Startup Roles - LookMyJob",
+    "metaDescription": "Find government recruitments and private enterprise jobs across Delhi, Gurugram, and Noida on LookMyJob."
+  },
+  {
+    "slug": "bangalore",
+    "name": "Bangalore",
+    "state": "Karnataka",
+    "jobCount": 2450,
+    "description": "The Silicon Valley of India offers premier career opportunities in generative AI, deep tech, cloud platforms, semiconductor design, and aerospace.",
+    "popularLocalities": ["Electronic City", "Whitefield", "Koramangala", "HSR Layout", "Indiranagar", "Manyata Tech Park"],
+    "topIndustries": ["Software Engineering", "Artificial Intelligence & ML", "Aerospace & Defense", "Semiconductors", "Fintech"],
+    "metaTitle": "Jobs in Bangalore 2026 | Silicon Valley Tech & Startup Openings - LookMyJob",
+    "metaDescription": "Explore top engineering, product, and leadership jobs in Bangalore. Connect with unicorn startups and global tech centers."
+  },
+  {
+    "slug": "pune",
+    "name": "Pune",
+    "state": "Maharashtra",
+    "jobCount": 1280,
+    "description": "An educational and automotive hub, Pune has evolved into a premier IT destination with extensive Hinjawadi and Magarpatta tech campuses.",
+    "popularLocalities": ["Hinjawadi", "Magarpatta City", "Viman Nagar", "Kharadi", "Baner", "Bhosari"],
+    "topIndustries": ["Automotive Engineering", "Information Technology", "Heavy Manufacturing", "Higher Education", "Biotech"],
+    "metaTitle": "Jobs in Pune 2026 | IT Park & Automotive Engineering Careers - LookMyJob",
+    "metaDescription": "Find vacancies in Pune's IT parks and automotive corridors. Jobs for developers, freshers, mechanical engineers, and managers."
+  },
+  {
+    "slug": "hyderabad",
+    "name": "Hyderabad",
+    "state": "Telangana",
+    "jobCount": 1560,
+    "description": "HITEC City and Genome Valley position Hyderabad as a premier global technology center, cloud infrastructure nexus, and pharmaceutical capital.",
+    "popularLocalities": ["HITEC City", "Gachibowli", "Madhapur", "Financial District", "Banjara Hills", "Kukatpally"],
+    "topIndustries": ["Cloud Computing & IT", "Pharmaceuticals & Biotech", "Financial Services", "Aerospace", "Gaming & VFX"],
+    "metaTitle": "Jobs in Hyderabad 2026 | HITEC City Tech & Pharma Openings - LookMyJob",
+    "metaDescription": "Discover career opportunities in Hyderabad across HITEC City and Gachibowli. Top tech, life sciences, and finance roles."
+  },
+  {
+    "slug": "chennai",
+    "name": "Chennai",
+    "state": "Tamil Nadu",
+    "jobCount": 1100,
+    "description": "The Detroit of South Asia combines massive automotive manufacturing, electronics production, healthcare institutions, and expanding SaaS tech parks.",
+    "popularLocalities": ["OMR (IT Corridor)", "Guindy", "T. Nagar", "Ambattur", "Sholinganallur", "Perungudi"],
+    "topIndustries": ["Automobile Manufacturing", "Enterprise SaaS & IT", "Healthcare & Medical", "Hardware Electronics", "Port Logistics"],
+    "metaTitle": "Jobs in Chennai 2026 | OMR Tech & Automobile Vacancies - LookMyJob",
+    "metaDescription": "Find the best job vacancies in Chennai across OMR IT corridor, Guindy, and automotive corridors on LookMyJob."
+  },
+  {
+    "slug": "kolkata",
+    "name": "Kolkata",
+    "state": "West Bengal",
+    "jobCount": 730,
+    "description": "East India's primary financial and commercial center, Kolkata offers rising IT opportunities in Salt Lake Sector V and New Town alongside banking and logistics.",
+    "popularLocalities": ["Sector V Salt Lake", "New Town Rajarhat", "Park Street", "Dalhousie", "Howrah", "Ballygunge"],
+    "topIndustries": ["Information Technology", "Banking & Financial Services", "Steel & Mining Logistics", "FMCG", "Education"],
+    "metaTitle": "Jobs in Kolkata 2026 | Salt Lake IT & Banking Careers - LookMyJob",
+    "metaDescription": "Search verified jobs in Kolkata, Salt Lake Sector V, and New Town. Fresh opportunities for graduates and seasoned professionals."
+  },
+  {
+    "slug": "jaipur",
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "jobCount": 490,
+    "description": "Rajasthan's capital is a thriving hub for digital marketing, IT services at Mahindra World City, tourism, gems & jewellery, and government administration.",
+    "popularLocalities": ["Malviya Nagar", "Mansarovar", "Vaishali Nagar", "Mahindra World City", "Sitapura Industrial Area", "C-Scheme"],
+    "topIndustries": ["IT & Business Services", "Tourism & Hospitality", "Gems & Handicrafts", "Education", "State Administration"],
+    "metaTitle": "Jobs in Jaipur 2026 | IT, Corporate & Management Openings - LookMyJob",
+    "metaDescription": "Browse latest job openings in Jaipur. Find high-paying roles in software companies, Mahindra World City, and top firms."
+  },
+  {
+    "slug": "chandigarh",
+    "name": "Chandigarh",
+    "state": "Punjab / Haryana",
+    "jobCount": 380,
+    "description": "The tri-city region of Chandigarh, Mohali, and Panchkula is Northern India's leading destination for IT services, pharma, and public administration.",
+    "popularLocalities": ["Rajiv Gandhi Chandigarh Tech Park", "Mohali Phase 8", "Sector 17", "Industrial Area Phase 1", "Panchkula IT Park"],
+    "topIndustries": ["Information Technology", "Pharmaceuticals", "Government Administration", "BPO & Customer Care", "Education"],
+    "metaTitle": "Jobs in Chandigarh 2026 | Tri-City IT & Healthcare Vacancies - LookMyJob",
+    "metaDescription": "Explore jobs in Chandigarh, Mohali, and Panchkula. Find positions in Rajiv Gandhi Tech Park and top corporate enterprises."
+  },
+  {
+    "slug": "remote-india",
+    "name": "All India Remote",
+    "state": "Pan-India",
+    "jobCount": 1650,
+    "description": "Work from home positions offering location flexibility, competitive compensation, asynchronous workflows, and modern digital collaboration.",
+    "popularLocalities": ["Work From Anywhere", "Hybrid Flexibility", "Home Office Pan-India"],
+    "topIndustries": ["Remote Software Engineering", "Digital Marketing", "Content & Copywriting", "Virtual Customer Support", "Data Analysis"],
+    "metaTitle": "Remote Jobs India 2026 | Work From Home Opportunities - LookMyJob",
+    "metaDescription": "Find verified work-from-home jobs across India. Full-time remote software, marketing, customer support, and freelance roles."
+  }
+]

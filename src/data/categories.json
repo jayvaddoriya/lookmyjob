@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "it-software",
+    "name": "IT & Software",
+    "icon": "Code2",
+    "description": "Software development, cloud architecture, AI/ML, DevOps, full stack engineering, and quality assurance.",
+    "count": 1420,
+    "color": "from-blue-500 to-indigo-600",
+    "popularRoles": ["Full Stack Developer", "React Developer", "DevOps Engineer", "Data Scientist", "QA Automation"],
+    "metaTitle": "IT & Software Jobs 2026 | Developer & Tech Vacancies - LookMyJob",
+    "metaDescription": "Discover latest IT & Software jobs in India. Apply for frontend, backend, AI/ML, and cloud engineering positions with top tech companies."
+  },
+  {
+    "slug": "government",
+    "name": "Government",
+    "icon": "Building2",
+    "description": "Central & State government recruitments, public sector undertakings, civil services, defense, and railways.",
+    "count": 890,
+    "color": "from-amber-500 to-orange-600",
+    "popularRoles": ["SSC CGL Officers", "UPSC Civil Services", "Railway NTPC", "State PSC Officers", "Defense Engineers"],
+    "metaTitle": "Government Jobs (Sarkari Naukri) 2026 | Central & State - LookMyJob",
+    "metaDescription": "Find verified government job notifications across India. Latest notifications for UPSC, SSC, Railways, Defense, and State PSCs."
+  },
+  {
+    "slug": "banking-finance",
+    "name": "Banking & Finance",
+    "icon": "Coins",
+    "description": "Commercial banking, financial analysis, investment banking, accounting, risk management, and insurance.",
+    "count": 760,
+    "color": "from-emerald-500 to-teal-600",
+    "popularRoles": ["Probationary Officer (PO)", "Financial Analyst", "Chartered Accountant", "Credit Manager", "Investment Associate"],
+    "metaTitle": "Banking & Finance Jobs 2026 | Bank PO & Financial Analyst Roles - LookMyJob",
+    "metaDescription": "Explore top banking and finance vacancies at leading public & private banks, fintech startups, and accounting firms across India."
+  },
+  {
+    "slug": "engineering",
+    "name": "Engineering",
+    "icon": "Cog",
+    "description": "Mechanical, civil, electrical, chemical, electronics, and structural engineering positions.",
+    "count": 640,
+    "color": "from-cyan-500 to-blue-600",
+    "popularRoles": ["Mechanical Engineer", "Site Civil Engineer", "Electrical Systems Engineer", "Quality Control Lead"],
+    "metaTitle": "Engineering Jobs 2026 | Mechanical, Civil & Electrical Roles - LookMyJob",
+    "metaDescription": "Browse verified engineering job openings in infrastructure, manufacturing, renewable energy, and heavy industries across India."
+  },
+  {
+    "slug": "healthcare",
+    "name": "Healthcare",
+    "icon": "Stethoscope",
+    "description": "Medical officers, nursing staff, clinical research, pharma production, and hospital administration.",
+    "count": 520,
+    "color": "from-rose-500 to-pink-600",
+    "popularRoles": ["Staff Nurse", "Medical Officer", "Pharmacist", "Clinical Research Associate", "Hospital Admin"],
+    "metaTitle": "Healthcare & Medical Jobs 2026 | Doctor & Nursing Openings - LookMyJob",
+    "metaDescription": "Find healthcare and medical careers in top multi-specialty hospitals, research institutes, and pharmaceutical laboratories."
+  },
+  {
+    "slug": "education",
+    "name": "Education",
+    "icon": "GraduationCap",
+    "description": "School teaching, university professors, academic counseling, curriculum design, and edtech instruction.",
+    "count": 430,
+    "color": "from-violet-500 to-purple-600",
+    "popularRoles": ["TGT / PGT Teacher", "Assistant Professor", "EdTech Subject Expert", "Academic Counselor"],
+    "metaTitle": "Education & Teaching Jobs 2026 | School & College Faculty - LookMyJob",
+    "metaDescription": "Discover teaching and educational careers across India. Find government school teacher vacancies, college professorships, and edtech positions."
+  },
+  {
+    "slug": "sales-marketing",
+    "name": "Sales & Marketing",
+    "icon": "TrendingUp",
+    "description": "Digital marketing, corporate B2B sales, brand management, growth marketing, and retail operations.",
+    "count": 810,
+    "color": "from-orange-500 to-amber-600",
+    "popularRoles": ["Business Development Executive", "Digital Marketing Specialist", "SEO Strategist", "Brand Manager"],
+    "metaTitle": "Sales & Marketing Jobs 2026 | B2B & Growth Roles - LookMyJob",
+    "metaDescription": "Find sales and marketing opportunities across high-growth startups and established multinational corporations."
+  },
+  {
+    "slug": "hr-administration",
+    "name": "HR & Administration",
+    "icon": "Users",
+    "description": "Talent acquisition, employee relations, payroll administration, office management, and operations.",
+    "count": 380,
+    "color": "from-sky-500 to-indigo-600",
+    "popularRoles": ["HR Generalist", "Technical Recruiter", "Payroll Specialist", "Office Operations Manager"],
+    "metaTitle": "HR & Administration Jobs 2026 | Human Resources Roles - LookMyJob",
+    "metaDescription": "Explore human resources and administration job listings across leading corporate offices and tech enterprises."
+  },
+  {
+    "slug": "customer-support",
+    "name": "Customer Support",
+    "icon": "Headphones",
+    "description": "Client success, technical support, voice & non-voice BPO, escalation management, and helpdesk operations.",
+    "count": 490,
+    "color": "from-teal-500 to-emerald-600",
+    "popularRoles": ["Customer Success Specialist", "Technical Support Representative", "Helpdesk Analyst", "Chat Support"],
+    "metaTitle": "Customer Support & BPO Jobs 2026 | Voice & Non-Voice - LookMyJob",
+    "metaDescription": "Browse customer support, service desk, and technical assistance roles with competitive packages and remote flexibility."
+  },
+  {
+    "slug": "design-creative",
+    "name": "Design & Creative",
+    "icon": "Palette",
+    "description": "UI/UX product design, graphic design, animation, video editing, and creative direction.",
+    "count": 310,
+    "color": "from-fuchsia-500 to-pink-600",
+    "popularRoles": ["UI/UX Designer", "Product Designer", "Motion Graphic Artist", "Visual Communication Lead"],
+    "metaTitle": "Design & Creative Jobs 2026 | UI/UX & Graphic Designer Roles - LookMyJob",
+    "metaDescription": "Find creative and product design positions in innovative agencies, digital products, and design studios across India."
+  },
+  {
+    "slug": "manufacturing",
+    "name": "Manufacturing",
+    "icon": "Factory",
+    "description": "Plant operations, supply chain logistics, quality assurance, assembly management, and procurement.",
+    "count": 460,
+    "color": "from-slate-600 to-slate-800",
+    "popularRoles": ["Production Supervisor", "Supply Chain Analyst", "Warehouse Manager", "Safety Officer"],
+    "metaTitle": "Manufacturing & Operations Jobs 2026 | Plant & Supply Chain - LookMyJob",
+    "metaDescription": "Explore manufacturing, plant maintenance, and industrial logistics opportunities in top industrial clusters across India."
+  },
+  {
+    "slug": "data-entry",
+    "name": "Data Entry",
+    "icon": "Keyboard",
+    "description": "Back-office processing, computer operator, catalog management, and clerical documentation.",
+    "count": 290,
+    "color": "from-blue-600 to-cyan-700",
+    "popularRoles": ["Computer Operator", "Data Entry Specialist", "Catalog Associate", "Back Office Executive"],
+    "metaTitle": "Data Entry & Back Office Jobs 2026 | Verified Openings - LookMyJob",
+    "metaDescription": "Discover legitimate and verified data entry and office administration jobs with transparent terms and flexible shifts."
+  },
+  {
+    "slug": "internships",
+    "name": "Internships",
+    "icon": "Briefcase",
+    "description": "Paid stipends, practical industry mentorship, graduate internships, and summer training programs.",
+    "count": 570,
+    "color": "from-indigo-500 to-blue-600",
+    "popularRoles": ["Software Engineering Intern", "Marketing Intern", "Research Intern", "Finance Trainee"],
+    "metaTitle": "Internships 2026 | Paid Stipend Opportunities for Students - LookMyJob",
+    "metaDescription": "Kickstart your professional career with verified paid internships at leading startups, research labs, and corporates."
+  },
+  {
+    "slug": "freshers",
+    "name": "Freshers",
+    "icon": "Sparkles",
+    "description": "Entry-level roles for recent graduates with comprehensive on-the-job training and clear career progression.",
+    "count": 920,
+    "color": "from-emerald-500 to-green-600",
+    "popularRoles": ["Graduate Engineer Trainee (GET)", "Junior Software Associate", "Management Trainee", "Associate Analyst"],
+    "metaTitle": "Fresher Jobs 2026 | Entry Level Vacancies for Graduates - LookMyJob",
+    "metaDescription": "Best entry-level job opportunities for fresh graduates across India. Zero experience required with structured training programs."
+  }
+]

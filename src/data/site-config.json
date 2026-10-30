@@ -1,0 +1,21 @@
+{
+  "name": "LookMyJob",
+  "tagline": "Find Your Next Opportunity.",
+  "heroHeading": "Find the Right Job. Build Your Future.",
+  "description": "LookMyJob is India's premier job discovery portal connecting ambitious professionals and fresh graduates with verified government recruitments, top tech roles, banking careers, and remote work opportunities.",
+  "url": "https://lookmyjob.online",
+  "email": "support@lookmyjob.online",
+  "phonePlaceholder": "+91 (079) 4000-XXXX (Helpdesk)",
+  "addressPlaceholder": "LookMyJob Digital Network, Ahmedabad / Bengaluru, India",
+  "social": {
+    "twitter": "https://twitter.com/lookmyjob",
+    "linkedin": "https://linkedin.com/company/lookmyjob",
+    "facebook": "https://facebook.com/lookmyjob",
+    "telegram": "https://t.me/lookmyjob_alerts"
+  },
+  "adsense": {
+    "enabled": false,
+    "publisherId": "ca-pub-XXXXXXXXXXXXXXXX",
+    "showPlaceholders": true
+  }
+}
