@@ -1,20 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { useSyncExternalStore } from "react";
 import Link from "next/link";
 import { 
   MapPin, 
   IndianRupee, 
   Sparkles, 
   CheckCircle, 
-  ArrowRight
+  ArrowRight,
+  Clock,
+  AlertCircle
 } from "lucide-react";
 import { Job } from "@/types";
 import BookmarkButton from "./BookmarkButton";
+import { subscribeApplications, getApplicationsSnapshot } from "@/lib/applications";
 
 interface FeaturedJobCardProps {
   job: Job;
 }
 
 export default function FeaturedJobCard({ job }: FeaturedJobCardProps) {
+  const applications = useSyncExternalStore(
+    subscribeApplications,
+    getApplicationsSnapshot,
+    () => []
+  );
+
+  const hasApplied = applications.some((app) => app.jobId === job.id);
+
   return (
     <div className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-sky-200/80 shadow-lg shadow-sky-900/5 hover:border-sky-400 hover:shadow-xl transition-all duration-200 overflow-hidden flex flex-col justify-between">
       {/* Top Banner Stripe */}
@@ -43,22 +56,32 @@ export default function FeaturedJobCard({ job }: FeaturedJobCardProps) {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-sky-500/10 text-sky-700 border border-sky-300">
-              <Sparkles className="w-3 h-3 text-sky-500" /> Featured
-            </span>
+            {hasApplied ? (
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-300">
+                <CheckCircle className="w-3 h-3 text-emerald-600" /> Applied
+              </span>
+            ) : job.isExpired ? (
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-rose-50 text-rose-700 border border-rose-200">
+                <AlertCircle className="w-3 h-3 text-rose-500" /> Closed
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-sky-500/10 text-sky-700 border border-sky-300">
+                <Sparkles className="w-3 h-3 text-sky-500" /> Featured
+              </span>
+            )}
             <BookmarkButton jobId={job.id} jobTitle={job.title} />
           </div>
         </div>
 
-        <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-sky-600 transition-colors leading-snug mb-2 font-sans">
+        <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug mb-2 font-sans">
           <Link href={`/jobs/${job.slug}`}>
             {job.title}
           </Link>
         </h3>
 
         <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600 mb-4">
-          <span className="font-bold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-lg border border-sky-100 flex items-center gap-1">
-            <IndianRupee className="w-3 h-3 text-sky-600" />
+          <span className="font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100 flex items-center gap-1">
+            <IndianRupee className="w-3 h-3 text-blue-600" />
             {job.salary}
           </span>
           <span className="bg-slate-100 px-2.5 py-1 rounded-lg font-medium">
@@ -75,17 +98,39 @@ export default function FeaturedJobCard({ job }: FeaturedJobCardProps) {
       </div>
 
       <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
-        <div className="text-[11px] text-slate-400">
-          Last Date: <span className="font-semibold text-slate-700">{job.applicationDeadline}</span>
+        <div className="text-[11px] text-slate-500 flex items-center gap-1">
+          <Clock className="w-3.5 h-3.5 text-slate-400" />
+          {job.isExpired ? (
+            <span className="font-semibold text-rose-600">Applications Closed</span>
+          ) : (
+            <span>
+              Closes in <strong className="text-blue-600 font-bold">{job.daysRemaining} days</strong> (Deadline: {job.applicationDeadline})
+            </span>
+          )}
         </div>
 
-        <Link
-          href={`/jobs/${job.slug}`}
-          className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 hover:text-sky-700 group-hover:translate-x-0.5 transition-all"
-        >
-          <span>View Opportunity</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            href={`/jobs/${job.slug}`}
+            className="text-xs font-bold text-slate-600 hover:text-slate-900 px-3 py-1.5 rounded-lg hover:bg-slate-100 transition-colors"
+          >
+            Details
+          </Link>
+
+          {!job.isExpired ? (
+            <Link
+              href={`/jobs/${job.slug}/apply`}
+              className="inline-flex items-center gap-1 text-xs font-bold px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all"
+            >
+              <span>{hasApplied ? "View Status" : "Apply Now"}</span>
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          ) : (
+            <span className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-200 text-slate-500 cursor-not-allowed">
+              Closed
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

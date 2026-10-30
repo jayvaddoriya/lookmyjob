@@ -20,12 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/government-jobs`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
       url: `${SITE_URL}/private-jobs`,
       lastModified: currentDate,
       changeFrequency: "daily",

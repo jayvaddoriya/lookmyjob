@@ -20,7 +20,7 @@ export default function JobFilters({
   onReset,
   className = "",
 }: JobFiltersProps) {
-  const jobTypes = ["all", "Government", "Full-time", "Contract", "Internship"];
+  const jobTypes = ["all", "Full-time", "Part-time", "Contract", "Internship"];
   const experiences = [
     { label: "All Experience Levels", value: "all" },
     { label: "Freshers (0-1 yrs)", value: "Fresher (0-1 yrs)" },
@@ -63,24 +63,9 @@ export default function JobFilters({
       {/* Sector Quick Toggles */}
       <div className="space-y-2">
         <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
-          Quick Filters
+          Work Flexibility
         </label>
         <div className="flex flex-col gap-2">
-          <label className="flex items-center gap-2.5 p-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors text-xs font-medium text-slate-800">
-            <input
-              type="checkbox"
-              checked={filters.isGovtJob === true}
-              onChange={(e) =>
-                onFilterChange("isGovtJob", e.target.checked ? true : undefined)
-              }
-              className="rounded text-sky-600 focus:ring-sky-500 w-4 h-4 cursor-pointer"
-            />
-            <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-amber-500" />
-              <span>Government Jobs Only</span>
-            </span>
-          </label>
-
           <label className="flex items-center gap-2.5 p-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors text-xs font-medium text-slate-800">
             <input
               type="checkbox"
@@ -92,7 +77,7 @@ export default function JobFilters({
             />
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-teal-500" />
-              <span>Work From Home Only</span>
+              <span>Work From Home / Remote Only</span>
             </span>
           </label>
         </div>

@@ -6,9 +6,9 @@ import { JobListSkeleton } from "@/components/common/LoadingSkeleton";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "All Job Openings 2026 | Verified Govt & Tech Vacancies",
+  title: "All Job Openings 2026 | Verified Tech & Corporate Careers",
   description:
-    "Explore 12,000+ verified job listings across India. Filter by category, location, salary, experience, government exams, and remote work on LookMyJob.",
+    "Explore 60+ verified private sector job vacancies across India. Filter by category, location, salary, experience, and remote work on LookMyJob with our guaranteed 15-day application window.",
   alternates: {
     canonical: `${SITE_URL}/jobs`,
   },
@@ -27,8 +27,8 @@ export default function JobsPage() {
     >
       <JobListingClient
         initialJobs={jobs}
-        pageTitle="All Job Vacancies in India (2026)"
-        pageSubtitle="Discover verified central & state government recruitments, high-paying tech positions, banking careers, and work-from-home roles."
+        pageTitle="Active Private Job Vacancies (2026)"
+        pageSubtitle="Discover verified private tech engineering positions, high-paying corporate careers, FinTech innovations, and flexible work-from-home roles."
       />
     </Suspense>
   );

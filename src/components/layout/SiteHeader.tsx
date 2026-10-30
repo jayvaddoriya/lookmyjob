@@ -52,8 +52,7 @@ export default function SiteHeader() {
 
   const navItems = [
     { name: "All Jobs", href: "/jobs" },
-    { name: "Govt Jobs", href: "/government-jobs", badge: "Sarkari" },
-    { name: "Private Jobs", href: "/private-jobs" },
+    { name: "Private Careers", href: "/private-jobs", badge: "Verified" },
     { name: "Work From Home", href: "/work-from-home", badge: "Remote" },
     { name: "Categories", href: "/categories" },
     { name: "Locations", href: "/locations" },
@@ -76,7 +75,7 @@ export default function SiteHeader() {
               <Sparkles className="w-3 h-3 text-amber-300" /> 2026 Recruitment Updates
             </span>
             <span className="hidden sm:inline">
-              Verified Sarkari Naukri, IT tech positions, and work-from-home vacancies updated daily.
+              Verified corporate tech engineering positions and remote vacancies with strict 15-day direct intake.
             </span>
           </div>
         </div>

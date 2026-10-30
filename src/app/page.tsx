@@ -3,9 +3,10 @@ import Link from "next/link";
 import { 
   ShieldCheck, 
   Sparkles,
-  Compass, 
   ArrowRight,
-  Flame
+  Flame,
+  Clock,
+  Briefcase
 } from "lucide-react";
 import JobSearchBar from "@/components/jobs/JobSearchBar";
 import JobCard from "@/components/jobs/JobCard";
@@ -20,7 +21,7 @@ import FAQAccordion from "@/components/common/FAQAccordion";
 import AdBanner from "@/components/ads/AdBanner";
 import { 
   getFeaturedJobs, 
-  getGovtJobs, 
+  getLatestJobs, 
   getPrivateJobs, 
   getRemoteJobs, 
   getAllCategories, 
@@ -33,7 +34,7 @@ import { buildFaqSchema } from "@/lib/seo";
 
 export default function HomePage() {
   const featuredJobs = getFeaturedJobs(4);
-  const govtJobs = getGovtJobs().slice(0, 4);
+  const latestJobs = getLatestJobs(6);
   const privateJobs = getPrivateJobs().slice(0, 4);
   const remoteJobs = getRemoteJobs().slice(0, 4);
   const categories = getAllCategories().slice(0, 8);
@@ -45,16 +46,16 @@ export default function HomePage() {
   const faqSchema = buildFaqSchema(faqs);
 
   const popularKeywords = [
-    { label: "UPSC Civil Services", href: "/jobs?keyword=UPSC" },
-    { label: "Railway NTPC & ALP", href: "/government-jobs?sector=railway" },
-    { label: "Bank PO & Clerks", href: "/categories/banking-finance" },
-    { label: "Full Stack Developer", href: "/jobs?keyword=Full+Stack" },
-    { label: "Freshers IT Jobs", href: "/categories/freshers" },
+    { label: "Next.js & React", href: "/jobs?keyword=Next.js" },
+    { label: "Go & Microservices", href: "/jobs?keyword=Golang" },
+    { label: "Cloud & DevOps", href: "/categories/engineering" },
+    { label: "Product Management", href: "/categories/product-management" },
+    { label: "FinTech & Banking", href: "/categories/banking-finance" },
+    { label: "Fresher Openings", href: "/categories/freshers" },
     { label: "Work From Home", href: "/work-from-home" },
-    { label: "Data Analyst", href: "/jobs?keyword=Data+Analyst" },
-    { label: "Civil Engineer", href: "/categories/engineering" },
+    { label: "Jobs in Bangalore", href: "/locations/bangalore" },
+    { label: "Jobs in Pune", href: "/locations/pune" },
     { label: "Jobs in Ahmedabad", href: "/locations/ahmedabad" },
-    { label: "Jobs in Surat", href: "/locations/surat" },
   ];
 
   return (
@@ -80,7 +81,7 @@ export default function HomePage() {
               {/* Trust Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700/80 text-sky-400 text-xs font-semibold tracking-wide shadow-sm animate-in fade-in duration-300">
                 <ShieldCheck className="w-4 h-4 text-teal-400" />
-                <span>India&apos;s Trusted 100% Free Job Discovery Network</span>
+                <span>India&apos;s Verified Private Tech & Corporate Job Gateway</span>
               </div>
 
               {/* Main Hero Heading */}
@@ -93,7 +94,7 @@ export default function HomePage() {
 
               {/* SEO-Friendly Introduction */}
               <p className="text-sm sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Discover verified central & state government recruitments (Sarkari Naukri), leading IT software engineering positions, public banking vacancies, and flexible work-from-home careers across India.
+                Discover verified private sector engineering positions, leading corporate vacancies, FinTech innovators, and flexible work-from-home careers across India. Apply directly on LookMyJob with our guaranteed 15-day application window.
               </p>
 
               {/* Central Search Bar */}
@@ -122,34 +123,34 @@ export default function HomePage() {
             <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
               <div className="p-4 rounded-2xl bg-slate-800/40 border border-slate-800 backdrop-blur-sm">
                 <div className="text-2xl sm:text-3xl font-black text-white font-sans">
-                  12,500+
+                  60+
                 </div>
                 <div className="text-xs text-slate-400 font-medium mt-1">
-                  Verified Vacancies
+                  Active Direct Vacancies
                 </div>
               </div>
               <div className="p-4 rounded-2xl bg-slate-800/40 border border-slate-800 backdrop-blur-sm">
                 <div className="text-2xl sm:text-3xl font-black text-amber-400 font-sans">
-                  850+
+                  15 Days
                 </div>
                 <div className="text-xs text-slate-400 font-medium mt-1">
-                  Government Exams
+                  Strict Application Window
                 </div>
               </div>
               <div className="p-4 rounded-2xl bg-slate-800/40 border border-slate-800 backdrop-blur-sm">
                 <div className="text-2xl sm:text-3xl font-black text-teal-400 font-sans">
-                  1,400+
+                  100%
                 </div>
                 <div className="text-xs text-slate-400 font-medium mt-1">
-                  Remote & WFH Roles
+                  Direct Internal Apply
                 </div>
               </div>
               <div className="p-4 rounded-2xl bg-slate-800/40 border border-slate-800 backdrop-blur-sm">
                 <div className="text-2xl sm:text-3xl font-black text-sky-400 font-sans">
-                  100%
+                  Daily
                 </div>
                 <div className="text-xs text-slate-400 font-medium mt-1">
-                  Free for Candidates
+                  Automatic Job Rotation
                 </div>
               </div>
             </div>
@@ -171,7 +172,7 @@ export default function HomePage() {
             <SectionHeading
               badge="Handpicked for You"
               title="Featured Job Openings"
-              subtitle="High-impact roles with market-leading compensation and transparent eligibility criteria."
+              subtitle="High-impact roles with market-leading compensation and verified internal application status."
               viewAllHref="/jobs"
               viewAllText="Explore All Jobs"
             />
@@ -185,30 +186,30 @@ export default function HomePage() {
         </section>
 
         {/* ========================================================= */}
-        {/* SECTION 2: LATEST GOVERNMENT RECRUITMENT (SARKARI NAUKRI) */}
+        {/* SECTION 2: LATEST FRESH VACANCIES (POSTED TODAY & RECENT) */}
         {/* ========================================================= */}
-        <section className="py-12 sm:py-16 bg-amber-50/30 border-b border-amber-100">
+        <section className="py-12 sm:py-16 bg-slate-50/70 border-b border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
-              badge="Sarkari Naukri 2026"
-              title="Latest Government Jobs & Public Sector Openings"
-              subtitle="Official recruitment notices from UPSC, SSC, Indian Railways, State PSCs, and Public Sector Banks."
-              viewAllHref="/government-jobs"
-              viewAllText="View All Government Jobs"
+              badge="Fresh Vacancies"
+              title="Newly Posted Openings (Active 15-Day Window)"
+              subtitle="Apply early while hiring pipelines are fresh. Each vacancy closes automatically after 15 days."
+              viewAllHref="/jobs"
+              viewAllText="View All Vacancies"
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-              {govtJobs.map((job) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {latestJobs.map((job) => (
                 <JobCard key={job.id} job={job} />
               ))}
             </div>
 
             <div className="mt-8 text-center">
               <Link
-                href="/government-jobs"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all"
+                href="/jobs"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all"
               >
-                <span>Browse All Central & State Govt Exams</span>
+                <span>Browse All 60+ Active Jobs</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -216,7 +217,7 @@ export default function HomePage() {
         </section>
 
         {/* ========================================================= */}
-        {/* SECTION 3: LATEST PRIVATE IT & CORPORATE JOBS            */}
+        {/* SECTION 3: TOP TECH & CORPORATE CAREERS                   */}
         {/* ========================================================= */}
         <section className="py-12 sm:py-16 bg-white border-b border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,7 +275,7 @@ export default function HomePage() {
               title="Browse Jobs by Industry Category"
               subtitle="Find specialized vacancies matching your technical domain, academic degree, or profession."
               viewAllHref="/categories"
-              viewAllText="Explore All 14 Categories"
+              viewAllText="Explore All Categories"
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -293,7 +294,7 @@ export default function HomePage() {
             <SectionHeading
               badge="Top Indian Hubs"
               title="Browse Jobs by City & Region"
-              subtitle="Discover career vacancies across Western India, Bangalore tech parks, Delhi NCR, and remote hubs."
+              subtitle="Discover career vacancies across Bangalore tech parks, Pune, Mumbai, Ahmedabad, and remote hubs."
               viewAllHref="/locations"
               viewAllText="View All Locations"
             />
@@ -314,7 +315,7 @@ export default function HomePage() {
             <SectionHeading
               badge="Employer Network"
               title="Top Hiring Organizations & Enterprises"
-              subtitle="Connect directly with verified public institutions, aerospace agencies, and Fortune 500 tech leaders."
+              subtitle="Connect directly with verified tech enterprises, digital innovators, and corporate leaders."
               alignment="center"
             />
 
@@ -339,25 +340,37 @@ export default function HomePage() {
                 Why Millions of Job Seekers Rely on LookMyJob
               </h2>
               <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-                We believe job discovery should be transparent, spam-free, and accessible to every graduate without subscription paywalls.
+                We believe job discovery should be transparent, spam-free, and accessible without external redirects or subscription paywalls.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center font-bold">
-                  <ShieldCheck className="w-6 h-6" />
+                  <Clock className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-white font-sans">
-                  Rigorous Editorial Verification
+                  Strict 15-Day Application Window
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  Every government exam notification is cross-referenced with official gazettes and employer recruitment portals. No fake vacancies or phantom recruiters.
+                  Every vacancy stays open for a maximum of 15 days. Once expired, applications automatically close, ensuring you never waste time applying to stale listings.
                 </p>
               </div>
 
               <div className="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center font-bold">
+                  <Briefcase className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-white font-sans">
+                  100% Direct On-Site Applications
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Never get redirected to cluttered third-party employer boards. Apply directly on LookMyJob, upload your resume, and receive an instant tracking ID.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-white font-sans">
@@ -365,18 +378,6 @@ export default function HomePage() {
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   We will never ask you for money, payment details, or paid subscriptions. Our operational costs are sustained transparently through ethical display advertising.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-3">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
-                  <Compass className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold text-white font-sans">
-                  Direct Official Application Links
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  We don&apos;t trap your application in intermediary funnels. We provide direct access to official government recruitment portals and verified company career pages.
                 </p>
               </div>
             </div>
@@ -391,7 +392,7 @@ export default function HomePage() {
             <SectionHeading
               badge="Career Intelligence"
               title="Expert Career Advice & Preparation Guides"
-              subtitle="In-depth articles authored by seasoned counselors on exam preparation, ATS resumes, and interview mastery."
+              subtitle="In-depth articles authored by seasoned counselors on tech salaries, ATS resumes, and interview mastery."
               viewAllHref="/blog"
               viewAllText="View All Articles"
             />
@@ -421,7 +422,7 @@ export default function HomePage() {
             <SectionHeading
               badge="Answers to Common Queries"
               title="Frequently Asked Questions"
-              subtitle="Everything you need to know about job notifications, application procedures, and recruitment verification on LookMyJob."
+              subtitle="Everything you need to know about job notifications, the 15-day application window, and direct applying on LookMyJob."
               alignment="center"
             />
 

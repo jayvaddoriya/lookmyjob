@@ -39,10 +39,10 @@ export default function DisclaimerPage() {
             <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <div className="space-y-1 text-xs sm:text-sm">
               <p className="font-bold">
-                Crucial Notice for All Job Seekers & Government Exam Aspirants:
+                Crucial Notice for All Job Seekers & Candidates:
               </p>
               <p>
-                LookMyJob (<a href="https://lookmyjob.online" className="underline font-semibold">https://lookmyjob.online</a>) is an independent informational and career discovery aggregator. We are NOT associated with the Government of India, any state government, or any corporate hiring agency.
+                LookMyJob (<a href="https://lookmyjob.online" className="underline font-semibold">https://lookmyjob.online</a>) is an independent private-sector career discovery and direct recruitment portal. We provide a streamlined application gateway for verified corporate employers.
               </p>
             </div>
           </div>
@@ -55,15 +55,11 @@ export default function DisclaimerPage() {
           </p>
 
           <h2 className="text-xl font-bold text-slate-900 font-sans pt-2">
-            2. Gazette Verification Advisory
+            2. 15-Day Application Policy Advisory
           </h2>
           <p>
-            All government notifications (UPSC, SSC, RRB, Banking, PSCs) listed on this portal are compiled from publicly available official gazette publications and departmental press releases. Although our editorial team takes utmost care to transcribe details accurately:
+            All direct job listings on LookMyJob have an active application lifetime of 15 days from their posting date. Once 15 days elapse, the listing automatically enters the &apos;Applications Closed&apos; state to maintain data freshness and prevent candidates from applying to filled positions.
           </p>
-          <ul className="list-disc list-inside space-y-1.5 pl-2">
-            <li>Candidates must verify eligibility criteria, examination fees, and closing dates directly from the official gazette before submitting an application.</li>
-            <li>LookMyJob is not responsible for inadvertent clerical errors or subsequent schedule amendments made by recruiting bodies.</li>
-          </ul>
 
           <h2 className="text-xl font-bold text-slate-900 font-sans pt-2">
             3. Demonstration & Sample Data Notice

@@ -37,11 +37,11 @@
     "name": "Delhi-NCR",
     "state": "Delhi / Haryana / UP",
     "jobCount": 1920,
-    "description": "The National Capital Region encompassing Delhi, Gurugram, and Noida is the primary center for central government ministries, top MNC headquarters, and startups.",
+    "description": "The National Capital Region encompassing Delhi, Gurugram, and Noida is a premier center for multinational technology headquarters, consulting scaleups, and digital startups.",
     "popularLocalities": ["Cyber City Gurugram", "Sector 62 Noida", "Connaught Place", "Okhla Industrial Area", "Saket", "Nehru Place"],
-    "topIndustries": ["Central Government Administration", "Tech & SaaS Startups", "Consulting & Law", "Telecom", "E-commerce"],
-    "metaTitle": "Jobs in Delhi NCR 2026 | Government, IT & Startup Roles - LookMyJob",
-    "metaDescription": "Find government recruitments and private enterprise jobs across Delhi, Gurugram, and Noida on LookMyJob."
+    "topIndustries": ["Tech & SaaS Startups", "Consulting & Advisory", "Enterprise FinTech", "Telecom & Cloud", "E-commerce Logistics"],
+    "metaTitle": "Jobs in Delhi NCR 2026 | IT, Corporate & Startup Roles - LookMyJob",
+    "metaDescription": "Find private enterprise engineering and corporate jobs across Delhi, Gurugram, and Noida on LookMyJob."
   },
   {
     "slug": "bangalore",
@@ -103,9 +103,9 @@
     "name": "Jaipur",
     "state": "Rajasthan",
     "jobCount": 490,
-    "description": "Rajasthan's capital is a thriving hub for digital marketing, IT services at Mahindra World City, tourism, gems & jewellery, and government administration.",
+    "description": "Rajasthan's capital is a thriving hub for digital marketing, IT services at Mahindra World City, tourism, gems & jewellery, and banking institutions.",
     "popularLocalities": ["Malviya Nagar", "Mansarovar", "Vaishali Nagar", "Mahindra World City", "Sitapura Industrial Area", "C-Scheme"],
-    "topIndustries": ["IT & Business Services", "Tourism & Hospitality", "Gems & Handicrafts", "Education", "State Administration"],
+    "topIndustries": ["IT & Business Services", "Tourism & Hospitality", "Gems & Handicrafts", "Education", "Banking & FinTech"],
     "metaTitle": "Jobs in Jaipur 2026 | IT, Corporate & Management Openings - LookMyJob",
     "metaDescription": "Browse latest job openings in Jaipur. Find high-paying roles in software companies, Mahindra World City, and top firms."
   },
@@ -114,9 +114,9 @@
     "name": "Chandigarh",
     "state": "Punjab / Haryana",
     "jobCount": 380,
-    "description": "The tri-city region of Chandigarh, Mohali, and Panchkula is Northern India's leading destination for IT services, pharma, and public administration.",
+    "description": "The tri-city region of Chandigarh, Mohali, and Panchkula is Northern India's leading destination for IT services, pharma, and consumer electronics.",
     "popularLocalities": ["Rajiv Gandhi Chandigarh Tech Park", "Mohali Phase 8", "Sector 17", "Industrial Area Phase 1", "Panchkula IT Park"],
-    "topIndustries": ["Information Technology", "Pharmaceuticals", "Government Administration", "BPO & Customer Care", "Education"],
+    "topIndustries": ["Information Technology", "Pharmaceuticals", "Engineering & Hardware", "BPO & Customer Care", "Education"],
     "metaTitle": "Jobs in Chandigarh 2026 | Tri-City IT & Healthcare Vacancies - LookMyJob",
     "metaDescription": "Explore jobs in Chandigarh, Mohali, and Panchkula. Find positions in Rajiv Gandhi Tech Park and top corporate enterprises."
   },

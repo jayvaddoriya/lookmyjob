@@ -10,7 +10,7 @@ export function buildOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/logo.svg`,
-    description: "LookMyJob is a premier job discovery portal connecting job seekers with verified government recruitments, top tech roles, and remote opportunities across India.",
+    description: "LookMyJob is a premier private sector job discovery portal connecting ambitious candidates with verified tech engineering positions, high-growth corporate careers, and remote vacancies across India.",
     sameAs: [
       "https://twitter.com/lookmyjob",
       "https://linkedin.com/company/lookmyjob",

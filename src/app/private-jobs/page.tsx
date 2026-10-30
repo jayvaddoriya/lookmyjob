@@ -31,7 +31,6 @@ export default function PrivateJobsPage() {
           initialJobs={privateJobs}
           pageTitle="Private Company Job Vacancies (2026)"
           pageSubtitle="Browse verified openings across software engineering, cloud systems, multinational corporations, and high-growth Indian startups."
-          presetFilter={{ isGovtJob: false }}
         />
       </Suspense>
 

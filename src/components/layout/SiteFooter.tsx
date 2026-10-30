@@ -31,7 +31,7 @@ export default function SiteFooter() {
                   Verified Recruitment
                 </h4>
                 <p className="text-xs text-slate-400">
-                  Track authentic government gazettes & verified direct employers.
+                  Track verified corporate enterprises and tech scaleup openings.
                 </p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function SiteFooter() {
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
-              LookMyJob is India&apos;s trusted career and job discovery platform connecting job seekers with verified government recruitments, top tech positions, banking careers, and flexible work-from-home opportunities.
+              LookMyJob is India&apos;s verified job discovery portal connecting ambitious candidates with top private tech engineering positions, high-growth corporate careers, and flexible work-from-home roles with a guaranteed 15-day application window.
             </p>
 
             <div className="space-y-2 text-xs pt-1">
@@ -191,7 +191,7 @@ export default function SiteFooter() {
             Official Recruitment Information Disclaimer:
           </p>
           <p>
-            LookMyJob is an independent career information portal and is not affiliated with the Government of India, any state government, or any recruiting department. We curate notifications from official gazettes and authorized employer portals for educational and career assistance. During this preview release, all job postings and listings contain sample demonstration data. Candidates are advised to verify details against primary official gazettes before submitting official recruitment applications.
+            LookMyJob is an independent career discovery and recruitment portal connecting job seekers with verified private sector employers, high-growth technology scaleups, and remote opportunities across India. All direct listings operate under our guaranteed 15-day application window. Candidates submit applications directly on LookMyJob without third-party redirection.
           </p>
         </div>
 

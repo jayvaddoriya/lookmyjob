@@ -251,7 +251,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
                   Browse Active Vacancies
                 </h3>
                 <p className="text-xs text-slate-500 leading-relaxed">
-                  Put this career advice into practice by searching thousands of verified government and tech opportunities on LookMyJob.
+                  Put this career advice into practice by searching verified tech, corporate, and remote opportunities on LookMyJob.
                 </p>
                 <Link
                   href="/jobs"

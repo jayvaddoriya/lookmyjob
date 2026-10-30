@@ -11,15 +11,15 @@
     "metaDescription": "Discover latest IT & Software jobs in India. Apply for frontend, backend, AI/ML, and cloud engineering positions with top tech companies."
   },
   {
-    "slug": "government",
-    "name": "Government",
-    "icon": "Building2",
-    "description": "Central & State government recruitments, public sector undertakings, civil services, defense, and railways.",
-    "count": 890,
+    "slug": "product-management",
+    "name": "Product & Agile",
+    "icon": "Layers",
+    "description": "Technical product management, Agile scrum leaders, UX strategists, growth product managers, and program managers.",
+    "count": 920,
     "color": "from-amber-500 to-orange-600",
-    "popularRoles": ["SSC CGL Officers", "UPSC Civil Services", "Railway NTPC", "State PSC Officers", "Defense Engineers"],
-    "metaTitle": "Government Jobs (Sarkari Naukri) 2026 | Central & State - LookMyJob",
-    "metaDescription": "Find verified government job notifications across India. Latest notifications for UPSC, SSC, Railways, Defense, and State PSCs."
+    "popularRoles": ["Product Manager", "Technical Product Owner", "Scrum Master", "Agile Coach", "Program Manager"],
+    "metaTitle": "Product Management Jobs 2026 | Product Owner & Agile Roles - LookMyJob",
+    "metaDescription": "Explore top product management and Agile leadership careers in India. Find high-growth product manager openings at tech scaleups and enterprise leaders."
   },
   {
     "slug": "banking-finance",
@@ -63,7 +63,7 @@
     "color": "from-violet-500 to-purple-600",
     "popularRoles": ["TGT / PGT Teacher", "Assistant Professor", "EdTech Subject Expert", "Academic Counselor"],
     "metaTitle": "Education & Teaching Jobs 2026 | School & College Faculty - LookMyJob",
-    "metaDescription": "Discover teaching and educational careers across India. Find government school teacher vacancies, college professorships, and edtech positions."
+    "metaDescription": "Discover teaching and educational careers across India. Find reputed private school teacher vacancies, college professorships, and edtech positions."
   },
   {
     "slug": "sales-marketing",

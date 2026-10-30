@@ -9,13 +9,12 @@ import {
   Calendar, 
   Clock, 
   CheckCircle, 
-  ShieldCheck,
-  ExternalLink,
   GraduationCap,
   Users,
   FileText,
-  AlertTriangle,
-  ArrowRight
+  ArrowRight,
+  ShieldCheck,
+  AlertCircle
 } from "lucide-react";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import JobCard from "@/components/jobs/JobCard";
@@ -47,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const title = `${job.title} at ${job.company} - Recruitment 2026`;
-  const description = `${job.title} vacancy at ${job.company}. Location: ${job.location}. Salary: ${job.salary}. Eligibility: ${job.qualification}. Check official notice and apply now on LookMyJob.`;
+  const description = `${job.title} vacancy at ${job.company}. Location: ${job.location}. Salary: ${job.salary}. Eligibility: ${job.qualification}. Apply directly on LookMyJob within the 15-day application window.`;
 
   return {
     title,
@@ -114,6 +113,38 @@ export default async function JobDetailPage({ params }: PageProps) {
           {/* Breadcrumbs */}
           <Breadcrumbs items={breadcrumbItems} className="mb-6" />
 
+          {/* 15-Day Application Window Status Banner */}
+          {job.isExpired ? (
+            <div className="mb-6 p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-900 flex items-start gap-3 shadow-sm">
+              <AlertCircle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
+              <div>
+                <h2 className="text-sm font-bold">Applications Closed for this Position</h2>
+                <p className="text-xs text-rose-700 mt-0.5">
+                  This vacancy was published 15+ days ago (deadline was {formattedDeadline}). To keep our hiring pipelines fresh, applications close strictly after 15 days. Please browse active positions below.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="mb-6 p-4 rounded-2xl bg-blue-50 border border-blue-200 text-blue-900 flex items-start justify-between gap-3 shadow-sm">
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <div>
+                  <h2 className="text-sm font-bold">Active Application Window: {job.daysRemaining} days remaining</h2>
+                  <p className="text-xs text-blue-700 mt-0.5">
+                    Posted {job.postedRelative || formattedPostedDate}. Closes on {formattedDeadline}. Applications are submitted directly on LookMyJob.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href={`/jobs/${job.slug}/apply`}
+                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider shrink-0 transition-colors shadow-sm"
+              >
+                <span>Apply Now</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          )}
+
           {/* Top Job Overview Card */}
           <div className="rounded-3xl bg-white border border-slate-200/90 shadow-sm p-6 sm:p-8 lg:p-10 mb-8 relative overflow-hidden">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-100">
@@ -131,12 +162,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                     {job.isVerified && (
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold text-teal-700 bg-teal-50 border border-teal-200">
                         <CheckCircle className="w-3.5 h-3.5 text-teal-600" />
-                        Verified Listing
-                      </span>
-                    )}
-                    {job.isGovtJob && (
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200">
-                        Government Sector {job.govtCategory ? `(${job.govtCategory})` : ""}
+                        Verified Employer
                       </span>
                     )}
                   </div>
@@ -165,15 +191,22 @@ export default async function JobDetailPage({ params }: PageProps) {
 
               {/* Action Buttons: Apply, Save, Share */}
               <div className="flex flex-col sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-end gap-3 shrink-0">
-                <a
-                  href={job.applyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-3.5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 text-white font-bold text-sm tracking-wide shadow-md shadow-sky-500/25 active:scale-95 transition-all flex items-center justify-center gap-2"
-                >
-                  <span>Official Application</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                {job.isExpired ? (
+                  <button
+                    disabled
+                    className="px-8 py-3.5 rounded-xl sm:rounded-2xl bg-slate-200 text-slate-500 font-bold text-sm cursor-not-allowed"
+                  >
+                    Applications Closed
+                  </button>
+                ) : (
+                  <Link
+                    href={`/jobs/${job.slug}/apply`}
+                    className="px-8 py-3.5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-sm tracking-wide shadow-md shadow-blue-500/25 active:scale-95 transition-all flex items-center justify-center gap-2"
+                  >
+                    <span>Apply on LookMyJob</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
 
                 <div className="flex items-center justify-center gap-2">
                   <BookmarkButton jobId={job.id} jobTitle={job.title} />
@@ -186,7 +219,7 @@ export default async function JobDetailPage({ params }: PageProps) {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
                 <div className="flex items-center gap-2 text-xs text-slate-500 mb-1">
-                  <IndianRupee className="w-4 h-4 text-sky-600" />
+                  <IndianRupee className="w-4 h-4 text-blue-600" />
                   <span>Compensation / Pay</span>
                 </div>
                 <div className="text-sm sm:text-base font-bold text-slate-900 truncate" title={job.salary}>
@@ -216,10 +249,10 @@ export default async function JobDetailPage({ params }: PageProps) {
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
                 <div className="flex items-center gap-2 text-xs text-slate-500 mb-1">
-                  <Clock className="w-4 h-4 text-rose-500" />
+                  <Clock className={`w-4 h-4 ${job.isExpired ? "text-rose-500" : "text-amber-500"}`} />
                   <span>Application Deadline</span>
                 </div>
-                <div className="text-sm sm:text-base font-bold text-rose-600">
+                <div className={`text-sm sm:text-base font-bold ${job.isExpired ? "text-rose-600" : "text-slate-900"}`}>
                   {formattedDeadline}
                 </div>
               </div>
@@ -240,7 +273,7 @@ export default async function JobDetailPage({ params }: PageProps) {
               {/* Job Description Card */}
               <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
                 <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-sans flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-sky-600" />
+                  <FileText className="w-5 h-5 text-blue-600" />
                   <span>Role Overview & Description</span>
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -248,13 +281,13 @@ export default async function JobDetailPage({ params }: PageProps) {
                 </p>
 
                 {/* Educational Qualification */}
-                <div className="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 flex items-start gap-3 mt-4">
-                  <GraduationCap className="w-5 h-5 text-sky-700 shrink-0 mt-0.5" />
+                <div className="p-4 rounded-2xl bg-blue-50/60 border border-blue-100 flex items-start gap-3 mt-4">
+                  <GraduationCap className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="text-xs font-bold text-sky-950 uppercase tracking-wider mb-0.5">
+                    <h3 className="text-xs font-bold text-blue-950 uppercase tracking-wider mb-0.5">
                       Prescribed Educational Qualification
                     </h3>
-                    <p className="text-xs sm:text-sm text-sky-900 font-medium">
+                    <p className="text-xs sm:text-sm text-blue-900 font-medium">
                       {job.qualification}
                     </p>
                   </div>
@@ -291,7 +324,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                 {job.eligibility && job.eligibility.length > 0 && (
                   <div className="pt-3">
                     <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                      Age & Selection Stages
+                      Selection Standards & Prerequisites
                     </h3>
                     <div className="space-y-1.5 text-xs sm:text-sm text-slate-600">
                       {job.eligibility.map((el, i) => (
@@ -362,29 +395,33 @@ export default async function JobDetailPage({ params }: PageProps) {
 
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-slate-900 text-white">
                   <div>
-                    <h3 className="text-sm font-bold">Ready to apply for this vacancy?</h3>
+                    <h3 className="text-sm font-bold">Apply directly on LookMyJob</h3>
                     <p className="text-xs text-slate-300">
-                      Redirects to the official employer recruitment portal.
+                      Submit your resume and candidate details securely without third-party redirects.
                     </p>
                   </div>
-                  <a
-                    href={job.applyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 to-teal-400 text-slate-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform"
-                  >
-                    <span>Proceed to Official Link</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  {job.isExpired ? (
+                    <span className="px-6 py-3 rounded-xl bg-slate-800 text-slate-400 font-bold text-xs uppercase tracking-wider">
+                      Applications Closed
+                    </span>
+                  ) : (
+                    <Link
+                      href={`/jobs/${job.slug}/apply`}
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-teal-400 text-slate-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform"
+                    >
+                      <span>Apply on LookMyJob</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  )}
                 </div>
 
-                {/* Sample Data Disclaimer Notice */}
-                <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-800 flex items-start gap-2.5">
-                  <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                {/* 15-day application guarantee notice */}
+                <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-900 flex items-start gap-2.5">
+                  <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold">Demonstration Sample Listing: </span>
+                    <span className="font-bold">LookMyJob 15-Day Freshness Guarantee: </span>
                     <span>
-                      {job.sourceVerified}. LookMyJob connects job seekers with authentic recruitment sources. Verify all dates and fees before paying any examination authority.
+                      All postings remain active for direct applications for maximum 15 days from posting date. Applications submitted on LookMyJob are securely forwarded to the employer&apos;s recruitment team.
                     </span>
                   </div>
                 </div>
@@ -400,85 +437,37 @@ export default async function JobDetailPage({ params }: PageProps) {
                     {job.logo}
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-slate-900 font-sans">
-                      {job.company}
-                    </h3>
-                    <p className="text-xs text-slate-400">{job.location}</p>
+                    <h3 className="text-base font-bold text-slate-900">{job.company}</h3>
+                    <p className="text-xs text-slate-500">{job.city}, {job.state}</p>
                   </div>
                 </div>
-
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Leading employer verified on LookMyJob. Explore additional active job listings and career opportunities at this organization.
-                </p>
-
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <Link
-                    href={`/jobs?keyword=${encodeURIComponent(job.company.split(" ")[0])}`}
-                    className="font-bold text-sky-600 hover:text-sky-700"
-                  >
-                    More from {job.company.split(" ")[0]}
-                  </Link>
+                <div className="pt-2">
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Direct verified employer listing on LookMyJob. All candidate submissions are processed directly through our secure application pipeline.
+                  </p>
                 </div>
               </div>
 
               {/* Sidebar Ad Placement */}
-              <AdSidebar slotId="job-details-sidebar-ad" format="rectangle" />
-
-              {/* Safety & Anti-Fraud Notice */}
-              <div className="bg-slate-900 text-white rounded-3xl p-6 border border-slate-800 space-y-3">
-                <div className="flex items-center gap-2 text-teal-400 font-bold text-xs uppercase tracking-wider">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span>Job Seeker Safety</span>
-                </div>
-                <h4 className="text-sm font-bold font-sans">Never Pay for Job Offers</h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  LookMyJob and genuine recruiters never ask for money or gift cards. If any recruiter demands registration or equipment fees, report it immediately.
-                </p>
-                <Link
-                  href="/disclaimer"
-                  className="text-xs text-sky-400 hover:underline block pt-1"
-                >
-                  Read Recruitment Disclaimer →
-                </Link>
+              <div className="sticky top-20">
+                <AdSidebar slotId="job-details-sticky-sidebar" />
               </div>
             </div>
           </div>
 
-          {/* ======================================================= */}
-          {/* SECTION: RELATED JOBS                                   */}
-          {/* ======================================================= */}
+          {/* Related Jobs Section */}
           {relatedJobs.length > 0 && (
             <div className="mt-16 pt-12 border-t border-slate-200">
-              <div className="flex items-center justify-between mb-8">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-sky-600">
-                    Recommended Roles
-                  </span>
-                  <h2 className="text-2xl font-black text-slate-900 font-sans">
-                    Similar Job Vacancies in {job.category}
-                  </h2>
-                </div>
-                <Link
-                  href={`/categories/${job.categorySlug}`}
-                  className="text-xs sm:text-sm font-bold text-sky-600 hover:text-sky-700 flex items-center gap-1"
-                >
-                  <span>View All in {job.category}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                {relatedJobs.map((rj) => (
-                  <JobCard key={rj.id} job={rj} />
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-sans mb-6">
+                Related {job.category} Openings
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedJobs.map((rJob) => (
+                  <JobCard key={rJob.id} job={rJob} />
                 ))}
               </div>
             </div>
           )}
-
-          {/* Bottom Ad Placement */}
-          <div className="mt-12">
-            <AdBanner slotId="job-details-bottom-banner" />
-          </div>
         </div>
       </div>
     </>

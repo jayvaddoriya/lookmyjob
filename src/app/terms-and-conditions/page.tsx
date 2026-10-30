@@ -42,14 +42,14 @@ export default function TermsPage() {
             1. Nature of the Service
           </h2>
           <p>
-            LookMyJob is an informational aggregator and job discovery platform. We are not a recruitment agency, placement agency, employer, or government department. We do not participate in employment interviews, recruitment decisions, or hiring contracts.
+            LookMyJob is an independent job discovery platform and direct candidate application gateway. We provide a platform for candidates to submit applications directly to verified private-sector employers and tech scaleups. We do not participate in final recruitment decisions or hiring contracts.
           </p>
 
           <h2 className="text-xl font-bold text-slate-900 font-sans pt-2">
             2. No Guarantee of Employment or Recruitment
           </h2>
           <p>
-            While we strive to ensure that all job notifications and exam dates published on this platform are accurate and verified from official gazettes and company releases, LookMyJob makes no warranties or guarantees regarding:
+            While we strive to ensure that all job postings published on this platform are accurate and verified from authentic corporate sources, LookMyJob makes no warranties or guarantees regarding:
           </p>
           <ul className="list-disc list-inside space-y-1 pl-2">
             <li>The successful selection or hiring of any candidate.</li>

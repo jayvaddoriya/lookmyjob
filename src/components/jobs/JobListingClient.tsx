@@ -56,7 +56,7 @@ function getSavedJobsSnapshot(): string[] {
 export default function JobListingClient({
   initialJobs,
   pageTitle = "All Job Opportunities",
-  pageSubtitle = "Explore verified government recruitments, top tech positions, banking careers, and remote vacancies across India.",
+  pageSubtitle = "Explore verified private tech positions, high-growth corporate careers, FinTech innovations, and remote vacancies across India.",
   presetFilter,
 }: JobListingClientProps) {
   const searchParams = useSearchParams();
@@ -68,7 +68,6 @@ export default function JobListingClient({
   const paramJobType = searchParams.get("jobType") || presetFilter?.jobType || "all";
   const paramExperience = searchParams.get("experience") || presetFilter?.experience || "all";
   const paramSaved = searchParams.get("saved") === "true";
-  const paramGovt = searchParams.get("govt") === "true" || presetFilter?.isGovtJob;
   const paramRemote = searchParams.get("remote") === "true" || presetFilter?.isRemote;
 
   const [filters, setFilters] = useState<FilterState>({
@@ -78,7 +77,6 @@ export default function JobListingClient({
     jobType: paramJobType,
     experience: paramExperience,
     salaryMin: 0,
-    isGovtJob: paramGovt ? true : undefined,
     isRemote: paramRemote ? true : undefined,
     sortBy: "latest",
   });
@@ -108,7 +106,6 @@ export default function JobListingClient({
       jobType: "all",
       experience: "all",
       salaryMin: 0,
-      isGovtJob: undefined,
       isRemote: undefined,
       sortBy: "latest",
     });
@@ -173,10 +170,6 @@ export default function JobListingClient({
       result = result.filter((j) => j.salaryMin >= filters.salaryMin);
     }
 
-    if (filters.isGovtJob !== undefined) {
-      result = result.filter((j) => j.isGovtJob === filters.isGovtJob);
-    }
-
     if (filters.isRemote !== undefined) {
       result = result.filter((j) => j.isRemote === filters.isRemote);
     }
@@ -210,7 +203,6 @@ export default function JobListingClient({
     filters.jobType !== "all" ? 1 : 0,
     filters.experience !== "all" ? 1 : 0,
     filters.salaryMin > 0 ? 1 : 0,
-    filters.isGovtJob !== undefined ? 1 : 0,
     filters.isRemote !== undefined ? 1 : 0,
   ].reduce((a, b) => a + b, 0);
 
@@ -333,17 +325,6 @@ export default function JobListingClient({
                   onClick={() => handleFilterChange("location", "all")}
                 >
                   <X className="w-3 h-3 hover:text-teal-900" />
-                </button>
-              </span>
-            )}
-            {filters.isGovtJob && (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs bg-amber-50 text-amber-700 border border-amber-200">
-                Govt Only
-                <button
-                  type="button"
-                  onClick={() => handleFilterChange("isGovtJob", undefined)}
-                >
-                  <X className="w-3 h-3 hover:text-amber-900" />
                 </button>
               </span>
             )}

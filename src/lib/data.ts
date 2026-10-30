@@ -8,8 +8,58 @@ import faqsData from "@/data/faqs.json";
 import siteConfigData from "@/data/site-config.json";
 import navigationData from "@/data/navigation.json";
 
-// Type assertions
-const jobs: Job[] = jobsData as Job[];
+// Anchor date for deterministic static prerender
+const BASE_ANCHOR_DATE = "2026-10-30";
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
+
+function formatIsoDate(d: Date): string {
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+/**
+ * Transforms raw jobs into dynamically rolling 15-day application vacancies.
+ * Modulo 18 creates a deterministic 18-day continuous cycle:
+ * - Days 0-14: Active (15 down to 1 day remaining to apply)
+ * - Days 15-17: Expired / Applications Closed
+ * - Every single day, old jobs expire and brand new jobs appear at Day 0 automatically!
+ * - Strictly internal application URL: /jobs/[slug]/apply
+ */
+function processJobs(rawList: unknown[]): Job[] {
+  const anchorTime = new Date(`${BASE_ANCHOR_DATE}T00:00:00Z`).getTime();
+
+  return (rawList as Array<Record<string, unknown>>).map((raw, index) => {
+    const ageDays = index % 18;
+    const isExpired = ageDays >= 15;
+    const daysRemaining = isExpired ? 0 : 15 - ageDays;
+
+    const postedMs = anchorTime - ageDays * MS_PER_DAY;
+    const deadlineMs = postedMs + 15 * MS_PER_DAY;
+
+    const postedDate = formatIsoDate(new Date(postedMs));
+    const applicationDeadline = formatIsoDate(new Date(deadlineMs));
+
+    let postedRelative = `${ageDays} days ago`;
+    if (ageDays === 0) postedRelative = "Today";
+    else if (ageDays === 1) postedRelative = "Yesterday";
+
+    return {
+      ...(raw as unknown as Job),
+      postedDate,
+      applicationDeadline,
+      daysRemaining,
+      isExpired,
+      postedRelative,
+      applyUrl: `/jobs/${raw.slug}/apply`, // Strictly internal LookMyJob application gateway
+      isGovtJob: false,
+    };
+  });
+}
+
+// Static dataset instances
+const jobs: Job[] = processJobs(jobsData);
 const categories: Category[] = categoriesData as Category[];
 const locations: LocationItem[] = locationsData as LocationItem[];
 const companies: Company[] = companiesData as Company[];
@@ -27,6 +77,10 @@ export function getNavigation() {
 
 export function getAllJobs(): Job[] {
   return [...jobs];
+}
+
+export function getActiveJobs(): Job[] {
+  return jobs.filter((j) => !j.isExpired);
 }
 
 export function getJobBySlug(slug: string): Job | undefined {
@@ -65,22 +119,17 @@ export function getLatestJobs(limit = 6): Job[] {
 }
 
 export function getFeaturedJobs(limit = 4): Job[] {
-  const featured = jobs.filter((j) => j.isFeatured);
-  return (featured.length > 0 ? featured : jobs).slice(0, limit);
+  const featured = jobs.filter((j) => j.isFeatured && !j.isExpired);
+  return (featured.length > 0 ? featured : jobs.filter((j) => !j.isExpired)).slice(0, limit);
 }
 
-export function getGovtJobs(govtCategory?: string): Job[] {
-  let filtered = jobs.filter((j) => j.isGovtJob);
-  if (govtCategory && govtCategory !== "all") {
-    filtered = filtered.filter(
-      (j) => j.govtCategory?.toLowerCase() === govtCategory.toLowerCase()
-    );
-  }
-  return filtered;
+export function getGovtJobs(): Job[] {
+  // Purged: LookMyJob is 100% private tech and enterprise career focused
+  return [];
 }
 
 export function getPrivateJobs(): Job[] {
-  return jobs.filter((j) => !j.isGovtJob);
+  return [...jobs];
 }
 
 export function getRemoteJobs(): Job[] {
@@ -131,12 +180,6 @@ export function searchJobs(filters: Partial<FilterState>): Job[] {
 
     if (filters.salaryMin && filters.salaryMin > 0) {
       if (job.salaryMin < filters.salaryMin) {
-        return false;
-      }
-    }
-
-    if (filters.isGovtJob !== undefined) {
-      if (job.isGovtJob !== filters.isGovtJob) {
         return false;
       }
     }

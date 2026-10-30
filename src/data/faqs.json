@@ -2,31 +2,31 @@
   {
     "id": "faq-1",
     "question": "What is LookMyJob and how does it help job seekers?",
-    "answer": "LookMyJob is an independent, premium job discovery portal designed to connect job seekers across India with verified career opportunities in government departments, leading IT enterprises, banking institutions, and remote-first companies. We aggregate official notifications and direct employer openings into a clean, searchable platform without charging any fees to candidates.",
+    "answer": "LookMyJob is an independent, premium private-sector job discovery portal designed to connect job seekers across India with verified career opportunities in high-growth tech enterprises, leading IT services companies, FinTech innovators, and remote-first organizations. We provide a clean, searchable platform with a direct internal application gateway without charging any fees to candidates.",
     "category": "General"
   },
   {
     "id": "faq-2",
     "question": "Does LookMyJob charge job seekers any registration or application fee?",
-    "answer": "No, never. LookMyJob is 100% free for all job seekers. We never charge money for viewing job listings, reading career guides, or accessing official application links. If anyone claims to represent LookMyJob and asks for payment, please report it to support@lookmyjob.online immediately.",
+    "answer": "No, never. LookMyJob is 100% free for all job seekers. We never charge money for viewing job listings, applying for jobs, or reading career guides. If anyone claims to represent LookMyJob and asks for payment, please report it to support@lookmyjob.online immediately.",
     "category": "Job Seekers"
   },
   {
     "id": "faq-3",
-    "question": "How are government jobs (Sarkari Naukri) verified on LookMyJob?",
-    "answer": "Our editorial research team tracks official government gazettes, recruitment portals (such as UPSC, SSC, RRB, and State PSCs), and employment news bulletins. Every government listing on LookMyJob includes direct references to the official gazette notice, eligibility criteria, and authentic application portals.",
-    "category": "Government Exams"
+    "question": "What is the 15-day application window policy on LookMyJob?",
+    "answer": "To ensure hiring managers receive prompt applications and candidates never waste time on stale vacancies, every job listing on LookMyJob remains open for applications for a maximum of 15 days from the date of posting. Once 15 days elapse, the application button is automatically disabled and marked 'Applications Closed'.",
+    "category": "Job Seekers"
   },
   {
     "id": "faq-4",
     "question": "How do I apply for jobs featured on LookMyJob?",
-    "answer": "Each job detail page includes an 'Official Application' or 'Apply on Employer Site' button. Clicking this redirects you securely to the official recruitment portal of the hiring organization or government commission. Note that on our sample demonstration pages, demo links are clearly labeled.",
+    "answer": "You apply directly on LookMyJob! Simply click 'Apply Now' on any active job card or detail page. You can complete the streamlined application form, upload your resume, and receive an instant Application Tracking Reference ID (e.g. LMJ-2026-XXXX) right on our platform without being redirected to external third-party sites.",
     "category": "Job Seekers"
   },
   {
     "id": "faq-5",
     "question": "Can fresh graduates find entry-level jobs on LookMyJob?",
-    "answer": "Yes! We have a dedicated 'Freshers' section featuring campus drives, graduate engineer trainee (GET) vacancies, junior IT roles, and central government exams where no prior work experience is required.",
+    "answer": "Yes! We have a dedicated 'Freshers' section featuring campus drives, graduate engineer trainee (GET) vacancies, junior IT roles, and associate positions across top Indian technology and corporate hubs where no prior work experience is required.",
     "category": "Job Seekers"
   },
   {

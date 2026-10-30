@@ -74,9 +74,9 @@ export default function NewsletterForm() {
                 onChange={(e) => setSector(e.target.value)}
                 className="bg-slate-800/90 text-white text-xs sm:text-sm rounded-xl px-3 py-3 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-400 font-medium"
               >
-                <option value="all">All Sectors</option>
-                <option value="govt">Govt & PSU Only</option>
+                <option value="all">All Vacancies</option>
                 <option value="it">IT & Tech Only</option>
+                <option value="product">Product & Management</option>
                 <option value="banking">Banking & Finance</option>
                 <option value="remote">Work From Home</option>
               </select>

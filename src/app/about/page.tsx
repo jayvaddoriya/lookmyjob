@@ -39,7 +39,7 @@ export default function AboutPage() {
               Empowering Every Indian Job Seeker to Build a Fulfilling Career
             </h1>
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-              LookMyJob is an independent, technology-driven job discovery platform. We curate verified government recruitments, top tech opportunities, and remote roles without charging candidates a single rupee.
+              LookMyJob is an independent, technology-driven job discovery platform. We curate verified private tech opportunities, high-growth corporate careers, and remote roles with a guaranteed 15-day application window without charging candidates a single rupee.
             </p>
           </div>
         </div>

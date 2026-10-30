@@ -8,9 +8,9 @@ import { getAllCategories } from "@/lib/data";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Job Categories 2026 | IT, Govt, Banking, Healthcare & Engineering",
+  title: "Job Categories 2026 | IT, Product, Banking, Healthcare & Engineering",
   description:
-    "Explore 14 professional job sectors in India. Find career vacancies in IT & Software, Government, Banking & Finance, Engineering, Healthcare, Sales, and Freshers.",
+    "Explore 14 professional job sectors in India. Find career vacancies in IT & Software, Product & Agile, Banking & Finance, Engineering, Healthcare, Sales, and Freshers.",
   alternates: {
     canonical: `${SITE_URL}/categories`,
   },

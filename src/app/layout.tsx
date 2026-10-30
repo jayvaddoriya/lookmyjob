@@ -22,23 +22,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "LookMyJob — Find Your Next Opportunity | Govt, IT & Remote Jobs 2026",
+    default: "LookMyJob — Find Your Next Opportunity | Private Tech, Engineering & Remote Jobs",
     template: "%s | LookMyJob",
   },
   description:
-    "Discover verified government jobs (Sarkari Naukri), top IT software positions, banking careers, and work-from-home vacancies across India on LookMyJob. 100% free discovery platform.",
+    "Discover verified private tech software positions, engineering careers, FinTech roles, and flexible work-from-home vacancies across India on LookMyJob. 100% direct internal applications with a strict 15-day application window.",
   keywords: [
     "LookMyJob",
-    "Government jobs 2026",
-    "Sarkari Naukri",
-    "IT jobs India",
+    "Private tech jobs India",
+    "Software Engineer jobs",
+    "Next.js Developer vacancies",
+    "Full Stack Engineer",
     "Remote jobs India",
-    "Work from home jobs",
-    "Bank PO recruitment",
-    "Railway jobs RRB",
-    "UPSC Civil Services",
-    "SSC CGL recruitment",
-    "Fresher jobs Ahmedabad Surat Bangalore Mumbai",
+    "Work from home careers",
+    "FinTech jobs",
+    "Product Manager jobs",
+    "Fresher IT jobs Ahmedabad Surat Bangalore Mumbai Pune",
   ],
   authors: [{ name: "LookMyJob Editorial Team", url: SITE_URL }],
   creator: "LookMyJob",
@@ -56,15 +55,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE_URL,
     siteName: "LookMyJob",
-    title: "LookMyJob — Find Your Next Opportunity | Govt, IT & Remote Jobs 2026",
+    title: "LookMyJob — Find Your Next Opportunity | Private Tech & Remote Careers",
     description:
-      "Explore verified government recruitments, top tech positions, banking careers, and remote vacancies across India. 100% free job discovery.",
+      "Explore verified private tech engineering vacancies, corporate roles, and remote opportunities across India with direct 15-day application intake.",
   },
   twitter: {
     card: "summary_large_image",
     title: "LookMyJob — Find Your Next Opportunity",
     description:
-      "Explore verified government recruitments, top tech positions, banking careers, and remote vacancies across India.",
+      "Explore verified private tech engineering vacancies, corporate roles, and remote opportunities across India with direct 15-day application intake.",
     creator: "@lookmyjob",
   },
   robots: {

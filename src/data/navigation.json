@@ -1,31 +1,31 @@
 {
   "mainMenu": [
     { "name": "All Jobs", "href": "/jobs", "badge": "New" },
-    { "name": "Government Jobs", "href": "/government-jobs", "badge": "Hot" },
-    { "name": "Private Jobs", "href": "/private-jobs" },
+    { "name": "Private Careers", "href": "/private-jobs", "badge": "Verified" },
     { "name": "Work From Home", "href": "/work-from-home", "badge": "Remote" },
     { "name": "Categories", "href": "/categories" },
     { "name": "Locations", "href": "/locations" },
     { "name": "Career Blog", "href": "/blog" }
   ],
   "quickFilters": [
-    { "name": "UPSC / Civil Services", "href": "/government-jobs?sector=upsc" },
-    { "name": "Railway NTPC & ALP", "href": "/government-jobs?sector=railway" },
-    { "name": "Bank PO & Clerks", "href": "/categories/banking-finance" },
-    { "name": "IT & Full Stack", "href": "/categories/it-software" },
+    { "name": "Full Stack & Next.js", "href": "/categories/it-software" },
+    { "name": "Cloud & DevOps", "href": "/categories/engineering" },
+    { "name": "Product & Agile", "href": "/categories/product-management" },
+    { "name": "Fintech & Banking", "href": "/categories/banking-finance" },
     { "name": "Fresher Openings", "href": "/categories/freshers" },
+    { "name": "Jobs in Bangalore", "href": "/locations/bangalore" },
+    { "name": "Jobs in Pune", "href": "/locations/pune" },
     { "name": "Jobs in Ahmedabad", "href": "/locations/ahmedabad" },
-    { "name": "Jobs in Surat", "href": "/locations/surat" },
-    { "name": "Jobs in Bangalore", "href": "/locations/bangalore" }
+    { "name": "Jobs in Surat", "href": "/locations/surat" }
   ],
   "footer": {
     "jobSectors": [
-      { "name": "Government Jobs", "href": "/government-jobs" },
-      { "name": "Private IT Jobs", "href": "/private-jobs" },
-      { "name": "Banking & Finance Jobs", "href": "/categories/banking-finance" },
-      { "name": "Work From Home Jobs", "href": "/work-from-home" },
-      { "name": "Fresher Vacancies", "href": "/categories/freshers" },
-      { "name": "Internship Opportunities", "href": "/categories/internships" }
+      { "name": "Tech & Software Jobs", "href": "/categories/it-software" },
+      { "name": "Private Corporate Vacancies", "href": "/private-jobs" },
+      { "name": "Banking & FinTech Jobs", "href": "/categories/banking-finance" },
+      { "name": "Work From Home Careers", "href": "/work-from-home" },
+      { "name": "Fresher Hiring Drives", "href": "/categories/freshers" },
+      { "name": "Paid Internship Roles", "href": "/categories/internships" }
     ],
     "topCities": [
       { "name": "Jobs in Ahmedabad", "href": "/locations/ahmedabad" },
@@ -38,10 +38,10 @@
     ],
     "resources": [
       { "name": "Career Blog & Guides", "href": "/blog" },
-      { "name": "Government Exam Guide 2026", "href": "/blog/latest-government-jobs-in-india-2026-guide" },
+      { "name": "Tech Salary Trends 2026", "href": "/blog/salary-negotiation-strategies-tech-banking-jobs" },
       { "name": "Resume Tips for ATS", "href": "/blog/resume-writing-tips-that-pass-ats-systems" },
       { "name": "Interview Preparation", "href": "/blog/interview-preparation-guide-technical-hr-rounds" },
-      { "name": "Salary Negotiation Guide", "href": "/blog/salary-negotiation-strategies-tech-banking-jobs" },
+      { "name": "Remote Job Search Guide", "href": "/blog/how-to-find-remote-jobs-india-global-clients" },
       { "name": "Job Seeker FAQs", "href": "/#faq" }
     ],
     "company": [

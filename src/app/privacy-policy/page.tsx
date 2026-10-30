@@ -81,10 +81,10 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <h2 className="text-xl font-bold text-slate-900 font-sans pt-2">
-            4. External Website Links
+            4. External Website Links & Employer Services
           </h2>
           <p>
-            Our job listings contain links to external third-party recruitment sites, including government commission portals (e.g., upsc.gov.in, ssc.gov.in) and company career portals. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites.
+            When submitting an application for a corporate vacancy, candidate contact details and uploaded resume documents are transmitted directly to the verified employer hiring team. In certain instances, listings may contain links to external company resource websites. We advise candidates to review the privacy policies of any third-party services.
           </p>
 
           <h2 className="text-xl font-bold text-slate-900 font-sans pt-2">

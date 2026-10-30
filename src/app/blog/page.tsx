@@ -9,9 +9,9 @@ import { getAllBlogs } from "@/lib/data";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Career Blog & Recruitment Guides 2026 | LookMyJob",
+  title: "Career Blog & Professional Guides 2026 | LookMyJob",
   description:
-    "Expert advice on cracking government examinations (UPSC, SSC, Bank PO), crafting ATS-friendly resumes, salary negotiation strategies, and discovering legitimate remote careers in India.",
+    "Expert advice on mastering technical interviews, crafting ATS-friendly resumes, corporate salary negotiation strategies, and discovering legitimate remote careers in India.",
   alternates: {
     canonical: `${SITE_URL}/blog`,
   },
