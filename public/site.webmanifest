@@ -1,0 +1,21 @@
+{
+  "name": "LookMyJob — Find Your Next Opportunity",
+  "short_name": "LookMyJob",
+  "description": "Discover verified private tech jobs, engineering careers, and work-from-home vacancies across India with direct 15-day application intake.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1d",
+  "theme_color": "#0a0f1d",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
