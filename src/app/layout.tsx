@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
@@ -77,6 +76,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "google-adsense-account": "ca-pub-1539263458228927",
+  },
 };
 
 export default function RootLayout({
@@ -90,11 +92,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full scroll-smooth`}>
       <head>
-        <Script
+        {/* Google AdSense Verification & Auto-Ads Snippet (Raw Script for Crawler Visibility) */}
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1539263458228927"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+        />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-1539263458228927"
         />
         <script
           type="application/ld+json"
